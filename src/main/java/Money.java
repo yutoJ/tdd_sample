@@ -1,4 +1,4 @@
-public class Money {
+public class Money implements Expression{
 
     protected int amount;
     protected String currency;
@@ -16,7 +16,7 @@ public class Money {
         return currency;
     };
 
-    public Money plus(Money addend){
+    Expression plus(Money addend){
         return new Money(this.amount + addend.amount, currency);
     }
 

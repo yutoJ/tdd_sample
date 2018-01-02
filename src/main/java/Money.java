@@ -9,7 +9,7 @@ public class Money {
     }
 
     Money times(int multiplier) {
-        return null;
+        return new Money(this.amount * multiplier, currency);
     };
 
     String currency() {

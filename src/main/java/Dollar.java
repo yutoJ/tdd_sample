@@ -1,18 +1,13 @@
 public class Dollar extends Money{
 
-    private String currency;
-    public Dollar(int amount) {
-        this.amount = amount;
-        this.currency = "USD";
-    }
 
-    @Override
-    String currency() {
-        return currency;
+    public Dollar(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
     }
 
     public Money times(int multiplier){
-        return new Dollar(this.amount * multiplier);
+        return Money.dollar(this.amount * multiplier);
     }
 }
 

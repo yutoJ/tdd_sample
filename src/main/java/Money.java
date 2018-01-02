@@ -16,6 +16,10 @@ public class Money {
         return currency;
     };
 
+    public Money plus(Money addend){
+        return new Money(this.amount + addend.amount, currency);
+    }
+
     public boolean equals(Object object){
         Money money = (Money) object;
         return this.amount == money.amount && this.currency().equals(money.currency());

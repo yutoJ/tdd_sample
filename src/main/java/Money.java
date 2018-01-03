@@ -20,6 +20,10 @@ public class Money implements Expression{
         return new Sum(this, addend);
     }
 
+    public Money reduce(String to){
+        return this;
+    }
+
     public boolean equals(Object object){
         Money money = (Money) object;
         return this.amount == money.amount && this.currency().equals(money.currency());
